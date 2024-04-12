@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{'/good/edit/' + ${good.id}}" method="post">
+      <p>Название товара</p>
+      <input type="text" name="name" th:value="${good.name}">
+      <p>Информация о товаре</p>
+      <input type="text" name="info" th:value="${good.info}">
+      <p>Стоимость товара</p>
+      <input type="text" name="price" th:value="${good.price}"><br><br>
+      <input type="submit" value="Редактировать">
+  </form>
+
+</body>
+</html>

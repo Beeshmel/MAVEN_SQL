@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Карточка товара</h1>
+    <h1 th:text="${good.name}"></h1>
+    <h4 th:text="${good.info}"></h4>
+    Стоимость товара: <p th:text="${good.price}"></p>
+    <a href="/goods">Перейти в каталог товаров</a>
+</body>
+</html>

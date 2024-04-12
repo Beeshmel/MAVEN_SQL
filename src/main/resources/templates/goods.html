@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="catalog">
+        <div th:each="el : ${goods}">
+            <h1 th:text="${el.name}"></h1>
+            <h4 th:text="${el.info}"></h4>
+            Стоимость товара: <p th:text="${el.price}"></p>
+            <a th:href="'/good/' + ${el.id}">Карточка товара</a>
+            <a th:href="'/good/delete/' + ${el.id}">Удалить товар</a>
+            <a th:href="'/good/edit/' + ${el.id}">Редактировать товар</a>
+            <hr>
+        </div>
+
+    </div>
+    <a href="/form">Добавить товар</a>
+
+</body>
+</html>
